@@ -1,0 +1,633 @@
+*{
+    background-color: rgb(0, 0, 0);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+}
+/*NAV BAR START */
+
+.navbar{
+    width: 100%;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    margin: 35px auto;
+    padding: 0px 10%;
+    justify-content: space-between;
+    display: block;
+}
+.logo{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.logo a{
+    color: rgb(255, 255, 255);
+    text-shadow: 3px 4px 4px rgba(255, 0, 0, 0.8);
+    font-size: 25px;
+}
+.logo a:hover{
+    color:red}
+nav ul li{
+    color: white;
+    display: inline-block;
+    list-style: none;
+    padding: 0px 15px;
+    position: relative;
+    transition: 0.5s;
+    background: transparent;
+}
+a,button{
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(231, 135, 135);
+    text-decoration: none;
+    cursor: pointer;
+
+}
+button{
+    background: black;
+    border: 2px solid red;
+    border-radius: 50px;
+    padding: 10px 25px;
+    display: inline-block;
+    top: 20px;
+    right: 20px;
+    z-index: 20;
+
+}
+nav li a:hover{
+    color: red;
+}
+.nav ul li .active::after{
+  content: '';
+  width: 100%;
+  height: 3px;
+  background-color: #f37474;
+  display: flex;
+  position: relative;
+  margin-left: 10px;
+}
+button a:hover{
+    color:red;
+}
+
+
+/*RESPONSIVE START */
+@media screen and (max-width: 999px){
+  
+    header{
+        padding-left: 50px;
+    }
+  
+    .list .item .content{
+        left: 50px;
+    }
+  
+    .content .title, .content .name{
+        font-size: 70px;
+    }
+  
+    .content .des{
+        font-size: 16px;
+    }
+  
+  }
+  
+  @media screen and (max-width: 690px){
+    header nav a{
+        font-size: 14px;
+        margin-right: 0;
+    }
+  
+    .list .item .content{
+        top: 40%;
+    }
+  
+    .content .title, .content .name{
+        font-size: 45px;
+    }
+  
+    .content .btn button{
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+  }
+  
+  
+  /* Base Styles */
+  * {
+    box-sizing: border-box;
+  }
+  
+  .banner, .slider, .overlay, .carousel, .main, .main1, .main2, .main3, .main5, .main6, .main7 {
+    width: 100%;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Responsive Adjustments */
+  @media screen and (max-width: 999px) {
+    /* Navigation */
+    .navbar {
+        flex-direction: column;
+    }
+    .navbar nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+    .navbar nav ul li {
+        padding: 10px;
+        text-align: center;
+    }
+  
+    /* Content Blocks */
+    .bar-photo, .bar-photo1, .bar-photo2, .bar-photo3, .menu-photo, .product-img, .reservation-photo {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+  
+    /* Text & Button Size */
+    .content h1, .content h3, .intro h2, .intro p, .for-menu h2, .for-menu p, .for-product h2, .for-product p {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+    .menu-button, .reservation-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+  
+    /* Carousel */
+    .carousel .list .item {
+        width: 80%;
+        left: 10%;
+    }
+  
+    .arrows button {
+        width: 40px;
+        height: 40px;
+    }
+  }
+  
+  
+  /* responsive start */
+  @media screen and (max-width: 690px) {
+    /* Navigation Links */
+    nav li {
+        font-size: 14px;
+    }
+  
+    /* Image & Text Blocks */
+    .bar-photo img, .bar-photo1 img, .bar-photo2 img, .bar-photo3 img, .menu-photo img, .product-img img, .reservation-photo img {
+        width: 100%;
+        margin: auto;
+    }
+  
+    /* Content Blocks */
+    .content, .intro, .intro1, .intro2, .intro3, .for-menu, .for-product, .for-reservation {
+        padding: 20px;
+    }
+  
+    /* Footer */
+    .row {
+        flex-direction: column;
+        text-align: center;
+    }
+  
+    /* Carousel Content */
+    .content .title, .content .name, .content .des {
+        font-size: 1rem;
+    }
+  
+    .carousel .list .item {
+        width: 70%;
+        height: 50vh;
+        left: 15%;
+        top: 20%;
+    }
+  
+    /* Button Adjustments */
+    .menu-button, .reservation-button {
+        font-size: 0.9rem;
+    }
+  }
+  /*responsive end*/
+  
+  
+  
+  /*  responsive navbar start*/
+  /* Base Navbar Styles */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+  }
+  
+  .hamburger {
+      display: none;
+      font-size: 24px;
+      color: white;
+      cursor: pointer;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 20; /* Ensure it’s on top */
+     
+  }
+  
+  /* Show Hamburger Icon on Smaller Screens */
+  @media screen and (max-width: 768px) {
+    .navbar nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        padding: 20px;
+        z-index: 10;
+        
+    }
+  
+    .navbar nav ul li {
+        padding: 10px 0;
+        text-align: center;
+    }
+    .navbar nav ul {
+      display: none;
+  }
+  
+    .hamburger {
+        display: block;
+    }
+  
+    .navbar.active nav ul {
+        display: flex;
+    }
+  
+    .navbar.active nav ul {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      padding: 20px;
+      z-index: 10;
+    
+  }
+  
+  
+  .navbar.active .book-table-btn {
+    display: block;
+    width: 100%;
+  }
+  }
+  
+  
+  /*responsive button start */
+  
+  /* Button Styling */
+  .book-table-btn {
+    background: black;
+    border: 2px solid red;
+    border-radius: 50px;
+    padding: 10px 25px;
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+  }
+  
+  .book-table-btn a {
+    color: rgb(231, 135, 135);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  /* Adjust for Mobile View */
+  @media screen and (max-width: 768px) {
+    .book-table-btn {
+        width: 100%;
+        margin-top: 20px;
+    }
+  }
+  
+  
+  
+  /* book a table button adjustment*/
+  /* Style the "Book a Table" Button Within the Navbar List */
+  .book-table-btn {
+    background: black;
+    border: 2px solid red;
+    border-radius: 50px;
+    padding: 10px 25px;
+    color: rgb(231, 135, 135);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .book-table-btn a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  /* Align Button with Menu Items on Mobile */
+  @media screen and (max-width: 768px) {
+    .navbar nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        padding: 20px;
+    }
+  
+    .navbar.active nav ul {
+        display: flex;
+    }
+  
+    .navbar nav ul li {
+        text-align: center;
+        padding: 10px 0;
+        width: 100%;
+    }
+  
+    .book-table-btn {
+        width: 100%;
+        margin-top: 10px;
+        padding: 15px 0;
+        text-align: center;
+    }
+  }
+  .navbar.active nav ul {
+    display: flex !important; /* Ensure the nav becomes visible */
+    flex-direction: column;
+}
+
+/*RESPONSIVE END */
+
+
+
+h1{
+  
+    text-align: center;
+
+}
+.title{
+    font-weight: 800;
+    font-size: 25px;
+
+}
+p{
+    letter-spacing: 1px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.policy{
+    width: 700px;
+    height: auto;
+    margin: auto;
+    
+}
+li{
+    padding-left: 20px;
+}
+li p{
+    padding-left: 20px;
+}
+i{
+    font-weight: 600;
+    font-size: 20px;
+}
+hr{
+    width: 85%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+/* Reduce padding and font size in the banner */
+.banner {
+height: 100vh;
+}
+
+.navbar {
+flex-direction: column;
+align-items: flex-start;
+padding: 10px;
+}
+
+.logo a {
+font-size: 20px;
+}
+
+nav ul {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0;
+}
+
+nav li {
+padding: 10px 0;
+}
+
+.content h1, .content h3 {
+font-size: 2em;
+}
+
+/* FAQ Section */
+.accordion {
+font-size: 1.5em;
+padding: 1rem;
+}
+
+/* Footer */
+.row {
+flex-direction: column;
+align-items: center;
+text-align: center;
+}
+
+.col {
+flex-basis: 100%;
+padding: 10px 0;
+}
+
+/* Adjust social icons */
+.social-icons .fab {
+margin: 5px;
+}
+}
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+.wrapper, .wrapperB, .contact {
+max-width: 90%;
+}
+
+.search-input {
+width: 100%;
+}
+
+.accordion {
+font-size: 1.3em;
+}
+}
+.navbar {
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.hamburger {
+display: none;
+font-size: 24px;
+color: white;
+cursor: pointer;
+position: absolute;
+top: 20px;
+right: 20px;
+z-index: 20; /* Ensure it’s on top */
+}
+
+/*footer start */
+.foot{
+background-color: black;
+width: 100%;
+height: auto;
+}
+footer{
+width: 100%;
+height: auto;
+bottom: 0;
+background: linear-gradient(to right, #00093c, #2d0b00);
+color: #fff;
+padding: 100px 0 30px;
+border-top-left-radius: 125px;
+font-size: 13px;
+line-height: 20px;
+}
+.row{
+margin: auto;
+display:flex;
+flex-wrap: wrap;
+justify-content: space-between;
+font-size: 20px;
+background: transparent;
+}
+.row p{
+margin-left: 20px;
+font-size: 25px;
+padding: 10px;
+background: transparent;
+}
+.row pre{
+margin-left: 0;
+font-size: 15px;
+margin-top: 10px;
+background: transparent;
+}
+.col{
+flex-basis: 25%;
+padding: 10px;
+background: transparent;
+
+}
+.col a{
+background: transparent;
+}
+
+
+.col p,pre{
+color: #f37474;
+}
+
+.col p a{
+text-decoration: none;
+
+}
+form{
+padding-bottom: 15px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+border-bottom: 1px solid #ccc;
+margin-bottom: 50px;
+background: transparent;
+}
+
+form .far{
+font-size: 18px;
+margin-right: 10px;
+}
+form input{
+width: 100%;
+background: transparent;
+color: #ccc;
+border: 0;
+outline: none;
+}
+form button{
+background: transparent;
+border: 0;
+outline: none;
+cursor: pointer;
+}
+form button .fas{
+font-size: 16px;
+color: #ccc;
+}
+.social-updates{
+padding-left: 0px;
+margin-bottom: 10px;
+color: #f37474;
+background: transparent;
+}
+.social-icons{
+background: transparent;
+}
+.social-icons i:hover{
+color: #f37474;
+}
+
+.social-icons .fab{
+width: 40px;
+height: 40px;
+border-radius: 50%;
+text-align: center;
+line-height: 40px;
+font-size: 20px;
+color: #000;
+background: #fff;
+margin-right: 15px;
+cursor: pointer;
+
+}
+hr{
+width: 90%;
+border: 0;
+border-bottom: 1px solid #ccc;
+margin: 20px auto;
+
+}
+.copyright{
+text-align: center;
+background: transparent;
+}
